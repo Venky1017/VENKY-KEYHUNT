@@ -1,6 +1,8 @@
+// bloom.h - Bloom filter header file
 #ifndef BLOOM_H
 #define BLOOM_H
 #include <stdint.h>
+#include <stddef.h>
 
 typedef struct {
     uint8_t *bit_array;
