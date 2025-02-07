@@ -1,10 +1,11 @@
+// bloom.c - Bloom filter implementation
 #include "bloom.h"
 #include <stdlib.h>
 #include <string.h>
 
 void bloom_init(bloom_filter *bf, size_t size, double error_rate) {
     bf->size = size;
-    bf->bit_array = calloc(size, sizeof(uint8_t));
+    bf->bit_array = (uint8_t *)calloc(size, sizeof(uint8_t));
 }
 
 void bloom_add(bloom_filter *bf, const char *data, size_t len) {
